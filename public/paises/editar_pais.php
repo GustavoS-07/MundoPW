@@ -23,16 +23,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<section>
+<section class="container">
   <h2>Editar País</h2>
   <?php if($errors): ?>
-    <div class="errors"><?php foreach($errors as $e) echo '<p>'.htmlspecialchars($e).'</p>'; ?></div>
+    <div class="errors">
+      <?php foreach($errors as $e): ?>
+        <p><?= htmlspecialchars($e) ?></p>
+      <?php endforeach; ?>
+    </div>
   <?php endif; ?>
   <form method="post" onsubmit="return validateCountryForm(this)">
-    <label>Nome<input name="nome" value="<?=htmlspecialchars($pais['nome'])?>" required></label>
-    <label>Continente<input name="continente" value="<?=htmlspecialchars($pais['continente'])?>" required></label>
-    <label>População<input name="populacao" type="number" min="0" value="<?=htmlspecialchars($pais['populacao'])?>"></label>
-    <label>Idioma principal<input name="idioma" value="<?=htmlspecialchars($pais['idioma'])?>"></label>
+    <label>Nome
+      <input name="nome" value="<?= htmlspecialchars($pais['nome']) ?>" required>
+    </label>
+    <label>Continente
+      <input name="continente" value="<?= htmlspecialchars($pais['continente']) ?>" required>
+    </label>
+    <label>População
+      <input name="populacao" type="number" min="0" value="<?= htmlspecialchars($pais['populacao']) ?>">
+    </label>
+    <label>Idioma principal
+      <input name="idioma" value="<?= htmlspecialchars($pais['idioma']) ?>">
+    </label>
     <button type="submit">Salvar</button>
   </form>
 </section>

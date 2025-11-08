@@ -23,17 +23,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<section>
+<section class="container">
   <h2>Editar Cidade</h2>
-  <?php if($errors): ?><div class="errors"><?php foreach($errors as $e) echo '<p>'.htmlspecialchars($e).'</p>'; ?></div><?php endif; ?>
+  <?php if($errors): ?>
+    <div class="errors">
+      <?php foreach($errors as $e): ?>
+        <p><?= htmlspecialchars($e) ?></p>
+      <?php endforeach; ?>
+    </div>
+  <?php endif; ?>
   <form method="post" onsubmit="return validateCityForm(this)">
-    <label>Nome<input name="nome" value="<?=htmlspecialchars($cidade['nome'])?>" required></label>
-    <label>População<input name="populacao" type="number" min="0" value="<?=htmlspecialchars($cidade['populacao'])?>"></label>
+    <label>Nome
+      <input name="nome" value="<?= htmlspecialchars($cidade['nome']) ?>" required>
+    </label>
+    <label>População
+      <input name="populacao" type="number" min="0" value="<?= htmlspecialchars($cidade['populacao']) ?>">
+    </label>
     <label>País
       <select name="id_pais" required>
         <option value="">-- selecione --</option>
         <?php foreach($ps as $p): ?>
-          <option value="<?= $p['id_pais'] ?>" <?= $p['id_pais']==$cidade['id_pais'] ? 'selected' : '' ?>><?= htmlspecialchars($p['nome']) ?></option>
+          <option value="<?= $p['id_pais'] ?>" <?= $p['id_pais'] == $cidade['id_pais'] ? 'selected' : '' ?>>
+            <?= htmlspecialchars($p['nome']) ?>
+          </option>
         <?php endforeach; ?>
       </select>
     </label>

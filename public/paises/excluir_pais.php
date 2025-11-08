@@ -8,7 +8,7 @@ $c->execute([$id]);
 $row = $c->fetch();
 if($row['qtd'] > 0){
 
-    header('Location: /paises/listar_paises.php?error=has_cities');
+    header('Location: listar_paises.php?error=has_cities');
     exit;
 }
 $d = $pdo->prepare('DELETE FROM paises WHERE id_pais = ?');
