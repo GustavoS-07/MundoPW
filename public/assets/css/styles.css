@@ -1,0 +1,9 @@
+body{font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; padding:0;}
+header{background:#b30000; color:white; padding:1rem}
+header a{color:white}
+main{padding:1rem}
+table{width:100%; border-collapse:collapse; margin-top:8px}
+td,th{border:1px solid #ddd; padding:.5rem}
+form label{display:block; margin:6px 0}
+.errors{background:#ffd5d5;padding:8px;border:1px solid #ff9b9b;margin-bottom:8px}
+@media (max-width:800px){ table, thead, tbody, th, td, tr{display:block;} }
