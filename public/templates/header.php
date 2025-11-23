@@ -15,6 +15,7 @@
     <a href="index.php">Início</a>
     <a href="paises/listar_paises.php">Países</a>
     <a href="cidades/listar_cidades.php">Cidades</a>
+    <a href="dashboard.php">Dashboard</a>
   </nav>
 </header>
 <main>

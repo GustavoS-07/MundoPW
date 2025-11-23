@@ -183,3 +183,33 @@ body {
     color: #155724;
     border: 1px solid #c3e6cb;
   }
+
+  .cards {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 6px;
+    flex: 1;
+  }
+
+  .card .big {
+    font-size: 2rem;
+    margin: 0.25rem 0;
+  }
+
+  .grids {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .grid-item {
+    flex: 1;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
